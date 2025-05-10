@@ -1,0 +1,36 @@
+.menu-lateral {
+    display: block;
+    position: fixed;
+    top: 74px;
+    right: -350px;
+    width: 250px;
+    background-color: white;
+    padding: 0;
+    border: 1px solid #bbb7b7;
+    border-top: none;
+    box-shadow: 1px 0 1px #bbb7b7;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.menu-lateral h2 {
+    margin: 0;
+    padding: 10px 0 5px 10px;
+}
+
+.menu-lateral.ativo {
+    right: 0;
+}
+
+.menu-lateral a {
+    font-family: "Inter", sans-serif;
+    display: block;
+    color: black;
+    text-decoration: none;
+    width: 100vh;
+    padding: 10px 0 10px 10px;
+}
+
+.menu-lateral a:hover {
+    background-color: #f4f4f4;
+}

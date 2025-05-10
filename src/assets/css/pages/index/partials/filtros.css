@@ -1,0 +1,110 @@
+.filtros h1 {
+    font-size: 30px;
+}
+
+.filtros h2 {
+    font-size: 17px;
+}
+
+.filtros-de-ordenacao li,
+.filtro-de-restricoes-de-alimentos li,
+.filtro-caracteristicas-de-alimentos li,
+.filtro-caracteristicas-de-bebidas li,
+.filtro-de-ordenacao-de-restaurantes li {
+    padding: 2px 0 0 0;
+}
+
+.filtro-de-ordenacao-de-restaurantes {
+    margin: 15px 0 0 0;
+}
+
+.filtros {
+    border: 1px solid #bbb7b7;
+    border-top: none;
+    height: 100vh;
+    width: 300px;
+    padding: 0 40px 30px 40px;
+}
+
+
+.filtros h3 {
+    font-size: 15px;
+    margin: 20px 0 10px 0;
+}
+
+
+input[type="checkbox"]:checked {
+    accent-color: #E53935;
+    color: white;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin: 5px;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+.filtro-de-preco {
+    width: 300px;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.range-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.balao-range-valor {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #E53935;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #ddd;
+    border-radius: 3px;
+    outline: none;
+    margin: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #E53935;
+    cursor: pointer;
+    border: none;
+    margin-top: -7px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    border-radius: 50%;
+    background: #E53935;
+    cursor: pointer;
+    border: none;
+}
+
+.conteudo-principal {
+    width: 100%;
+    margin: 0 auto 0 auto;
+}

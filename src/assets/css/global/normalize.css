@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin-top: 75px;
+    display: flex;
+}
+
+li {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    list-style: none;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+}
+
+h1,
+h2 {
+    font-family: "Acme", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #E53935;
+    padding: 20px 0 5px 0;
+    font-weight: bold;
+}
