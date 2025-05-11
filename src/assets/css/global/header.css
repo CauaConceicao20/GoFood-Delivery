@@ -12,18 +12,28 @@ header {
 header figure {
     margin: auto 100px 0 20px;
 }
+
 .btn-perfil,
+.btn-carrinho,
 .btn-endereco {
     background: transparent;
     color: white;
     font-weight: bold;
     border: none;
-    margin: 0 20px 0 20px;
+    margin: 0 15px 0 15px;
     height: 50px;
 }
+
+header div:hover,
+.container-logo:hover
 .btn-perfil:hover,
-.btn-endereco:hover {
+.btn-carrinho:hover,
+.btn-endereco:hover { 
     cursor: pointer;
+}
+
+.btn-endereco {
+    width: 100px;
 }
 
 header div {
@@ -32,15 +42,12 @@ header div {
     margin: 0 20px 0 20px;
 }
 
-header div:hover {
-    cursor: pointer;
-}
-
 #logo-gofood {
     width: 150px;
     height: 70px;
     margin: 0 10px 0;
 }
+
 
 .container-busca {
     display: flex;

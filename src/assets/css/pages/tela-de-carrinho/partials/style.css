@@ -1,8 +1,8 @@
-
-
 .container {
-    max-width: 600px;
-    margin: auto;
+    width: 1200px;
+    padding: 30px;
+    margin: 0px auto 0 auto;
+    border: 1px solid #d9d9d9;
 }
 
 .back-button {
@@ -19,49 +19,6 @@ h2 {
     padding: 8px;
     margin: 15px 0;
     box-sizing: border-box;
-}
-
-.item {
-    display: flex;
-    align-items: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.item img {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
-    margin-right: 15px;
-}
-
-.item-info {
-    flex: 1;
-}
-
-.item-info p {
-    margin: 4px 0;
-}
-
-.item-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.item-buttons button {
-    background-color: #e53935;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.item-buttons button:first-child {
-    background-color: #d32f2f;
 }
 
 hr {

@@ -1,4 +1,4 @@
-export function definiOpcoesDoMenuLateral(estadoDoUsuario) {
+export function renderizarMenu(estadoDoUsuario) {
     let menu = document.getElementById("navegacaoMenu");
 
     if (estadoDoUsuario == 1) {
