@@ -1,6 +1,6 @@
 import { abrirModal, fecharModal, fecharModalComClickExterno } from '../../components/modal.js';
 import { menuLateralPerfil, fecharMenuLateral } from '../../components/menuLateral.js';
-import { expandirMenuInferior, fecharMenuInferior, fecharMenuInferiorComCLickExterno, configurarMenuInferior} from '../../components/menuInferior.js';
+import { expandirMenuInferior, fecharMenuInferior, fecharMenuInferiorComCLickExterno, configurarMenuInferior } from '../../components/menuInferior.js';
 import { configurarAdicionarEndereco } from '../../components/endereco.js';
 import { voltarPaginaAnterior } from '../../components/navegacaoDePg.js';
 
@@ -16,12 +16,11 @@ export function configurarEventos() {
   configurarMenuInferior();
   configurarAdicionarEndereco();
 
-  let btnHamburguerFooter = document.getElementById("btnHamburguerFooter");
-  let btnPerfilFooter= document.getElementById("btnPerfilFooter");
-  let btnFecharMenuInferior = document.getElementById("btnFecharMenuInferior");
+  const btnHamburguerFooter = document.getElementById("btnHamburguerFooter");
+  const btnPerfilFooter = document.getElementById("btnPerfilFooter");
+  const btnFecharMenuInferior = document.getElementById("btnFecharMenuInferior");
   const btnVoltar = document.getElementById("btnVoltar");
 
-  
   if (btnHamburguerFooter) {
     btnHamburguerFooter.addEventListener("click", () => expandirMenuInferior("btnHamburguerFooter", 0));
   }
@@ -34,7 +33,7 @@ export function configurarEventos() {
     btnFecharMenuInferior.addEventListener("click", fecharMenuInferior);
   }
 
-   if (btnVoltar) {
-      btnVoltar.addEventListener("click", voltarPaginaAnterior);
-    }
+  if (btnVoltar) {
+    btnVoltar.addEventListener("click", voltarPaginaAnterior);
+  }
 }
