@@ -1,3 +1,59 @@
+.btn-abrir-filtros {
+    display: none;
+    margin: 20px 0 0 10px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #E53935;
+    color: white;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.btn-abrir-filtros:hover {
+    background-color: #a82d2d;
+    cursor: pointer;
+    transition: 1.0s;
+}
+
+.area-btn-fechar-filtro {
+    display: none;
+    left: 10px;
+    margin: 10px 0 0 0;
+}
+
+.btn-fechar-filtro {
+    color: red;
+    top: 10px;
+    right: 15px;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.area-btn-aplicar-filtro {
+    display: none;
+    justify-content: end;
+    padding: 15px;
+}
+
+.btn-aplicar-filtro {
+    width: 100px;
+    height: 50px;
+    background-color: #E53935;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 7px 10px 7px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-aplicar-filtro:hover {
+    background-color: #a82d2d;
+    cursor: pointer;
+
+}
+
 .filtros h1 {
     font-size: 30px;
 }
@@ -21,11 +77,10 @@
 .filtros {
     border: 1px solid #bbb7b7;
     border-top: none;
-    height: 1000px;
+    height: 100%;
     width: 300px;
     padding: 0 40px 30px 40px;
 }
-
 
 .filtros h3 {
     font-size: 15px;
@@ -107,4 +162,44 @@ input[type="range"]::-moz-range-thumb {
 .conteudo-principal {
     width: 100%;
     margin: 0 auto 0 auto;
+}
+
+@media (max-width: 1229px) {
+    .filtros {
+        display: none;
+    }
+
+    .filtros.flutuante {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        border: 1px solid black;
+        border-top: none;
+        height: 100%;
+        width: 300px;
+        padding: 0 40px 30px 40px;
+        z-index: 2000;
+        background-color: white;
+        overflow-y: scroll;
+    }
+
+    .filtros.flutuante.ativo {
+        transform: translateX(0);
+
+    }
+
+    .area-btn-fechar-filtro {
+        display: flex;
+    }
+
+    .btn-abrir-filtros {
+        display: block;
+    }
+
+    .area-btn-aplicar-filtro {
+        display: flex;
+    }
 }

@@ -14,7 +14,8 @@
 <body>
     <header>
         <figure class="container-logo">
-            <a href="/src/index.html"><img id="logo-gofood" src="/src/assets/img/global/logo.png" alt="Logo da empresa"></a>
+            <a href="/src/index.html"><img id="logo-gofood" src="/src/assets/img/global/logo.png"
+                    alt="Logo da empresa"></a>
         </figure>
 
         <form action="" method="GET" class="container-busca">
@@ -26,37 +27,44 @@
 
         <button class="btn-endereco" id="btnEndereco">Insira seu endereço</button>
 
-        <button class="btn-carrinho" id="btnCarrinho">
-            <a href="/src/carrinho.html"><img src="/src/assets/img/global/icon-carrinho-de-compras-.png" alt="Ícone do carrinho de compras"></a>
-       </button>
+        <button class="btn-carrinho" id="btnCarrinhoHeader">
+            <a href="/src/carrinho.html"><img src="/src/assets/img/global/icon-carrinho-de-compras-.png"
+                    alt="Ícone do carrinho de compras"></a>
+        </button>
 
-        <button class="btn-perfil" id="btnPerfil">
+        <button class="btn-perfil" id="btnPerfilHeader">
             <img src="/src/assets/img/global/icon-conta.png" alt="Ícone de perfil">
         </button>
     </header>
 
+    <div class="overlay" id="overlay"></div>
     <aside class="menu-lateral" id="menuLateral">
         <h2>Menu</h2>
         <nav class="navegacao-menu" id="navegacaoMenu">
-            <ul>
-            </ul>
         </nav>
     </aside>
 
     <main>
         <div class="modal-area" id="modalArea">
             <div class="modal-conteudo" id="modalConteudo">
-                <span class="btn-fechar" id="btnFechar">&times;</span>
+                <span class="btn-fechar-modal" id="btnFecharModal">&times;</span>
                 <h2>Digite Seu Endereço:</h2>
-                <input type="text">
+                <input class="input-endereco" id="inputEndereco" type="text">
                 <div class="area-btn-modal" id="areaBtnModal">
-                    <button>Adicionar Endereço</button>
+                    <button class="btn-adicionar-endereco-modal" id="btnAddEnderecoModal">Adicionar Endereço</button>
                 </div>
             </div>
         </div>
 
-        </div>
-        <aside class="filtros">
+        <button class="btn-abrir-filtros" id="btnAbrirFiltros">Filtros</button>
+
+        <div class="overlay" id="overlayMenuFiltro"></div>
+        <aside class="filtros" id="filtrosMenu">
+            <div class="area-btn-fechar-filtro">
+                <span class="btn-fechar-filtro" id="btnFecharFiltro">&times;</span>
+            </div>
+
+
             <section class="alimentos-e-bebidas">
                 <h1>Alimentos/Bebidas</h1>
 
@@ -71,7 +79,6 @@
                         <label for="frete-gratis">Frete grátis</label>
                     </li>
                 </ul>
-
 
                 <div class="filtro-de-preco">
                     <label for="precoRange">
@@ -187,9 +194,31 @@
                     </li>
                 </ul>
             </section>
+            <div class="area-btn-aplicar-filtro">
+                <button class="btn-aplicar-filtro" id="btnAplicarFiltro">Aplicar Filtro</button>
+            </div>
         </aside>
+
         <section class="conteudo-principal">
-            <section class="conteiner-categorias">
+            <section class="section-ultimos-pedidos">
+                <div class="section-ultimos-pedidos-conteudo">
+                    <div class="titulo-secao-utlimos-pedidos">
+                        <h1>Seus ultimos pedidos</h1>
+                        <span>Repetir pedido</span>
+                    </div>
+                    <div class="area-ultimos-pedidos">
+                        <article class="ultimos-pedidos">
+                            <h2 class="titulo-ultimos-pedidos">Marmita fit - Restaurante Bom Sabor </h2>
+                            <button class="btn-repetir-pedido">Repetir pedido</button>
+                        </article>
+                        <article class="ultimos-pedidos">
+                            <h2 class="titulo-ultimos-pedidos">Marmita fit - Restaurante Bom Sabor </h2>
+                            <button class="btn-repetir-pedido">Repetir pedido</button>
+                        </article>   
+                    </div>
+                </div>
+            </section>
+            <section class="section-categorias">
                 <aside class="categorias-alimentos">
                     <article class="opcao-categoria">
                         <figure>
@@ -237,7 +266,7 @@
                 </aside>
             </section>
 
-            <hr class="linha-de-separacao">
+            <hr class="linha-de-separacao-2">
 
             <section class="container-card-alimentos">
                 <article class="card-alimentos">
@@ -246,24 +275,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -275,24 +296,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -304,24 +317,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -333,24 +338,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -362,24 +359,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -391,24 +380,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -420,24 +401,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -449,24 +422,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -478,24 +443,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -507,24 +464,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -536,24 +485,16 @@
                     </figure>
                     <div class="descricao-do-alimento">
                         <span class="card-titulo">Cheeseburger Clássico</span>
-                        <p>Pão brioche, hambúrguer 150g, queijo, alface, tomate e maionese da casa. Lorem ipsum dolor
-                            sit amet.</p>
                         <div class="card-restaurante-responsavel">
                             <span class="card-img-restaurante"><img
                                     src="/src/assets/img/pages/index/logo-restaurante-hamburguer.jpg" alt=""></span>
                             <span>Burger da Rua</span>
+                            <span class="card-avaliacao">4.9</span>
+                            <span class="icon-estrela"></span>
                         </div>
-                        <ul class="card-avaliacao">
-                            <li><span>Avaliações:</span></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                            <li class="icon-estrela"></li>
-                        </ul>
-                        <span class="card-preco">
+                        <div class="card-preco">
                             <span class="rs">R$</span><span class="valor">24,90</span>
-                        </span>
+                        </div>
                         <div class="card-container-botao">
                             <button>Adicionar ao carrinho</button>
                         </div>
@@ -562,8 +503,57 @@
             </section>
         </section>
     </main>
+
+    <div class="overlay" id="overlayMenuInferior"></div>
+    <div id="menuInferior" class="menu-inferior">
+        <div class="area-btn-fechar-menu-inferior">
+            <span class="btn-fechar-menu-inferior" id="btnFecharMenuInferior">&times;</span>
+        </div>
+        <ul class="menu-opcoes" id="menuOpcoes">
+        </ul>
+    </div>
+
     <footer>
-        <p>&copy; 2025 GoFood Delivery. Todos os direitos reservados.</p>
+        <div class="footer-copyright">
+            <p>&copy; 2025 GoFood Delivery. Todos os direitos reservados.</p>
+        </div>
+
+        <nav class="bottom-bar">
+            <div class="opcao-footer" id="btnInicio">
+                <div class="area-opcao-bottom-bar">
+                    <a href=""><img src="/src/assets/img/global/icons8-casa-50.png" alt="icone de inicio"></a>
+                    <div><span>Início</span></div>
+                </div>
+            </div>
+
+            <div class="divisao-bottom-bar"></div>
+
+            <div class="opcao-footer" id="btnPerfilFooter">
+                <div class="area-opcao-bottom-bar">
+                    <img src="/src/assets/img/global/icon-conta.png" alt="icone de perfil">
+                    <div><span>Perfil</span></div>
+                </div>
+            </div>
+
+            <div class="divisao-bottom-bar"></div>
+
+            <div class="opcao-footer" id="btnCarrinhoFooter">
+                <div class="area-opcao-bottom-bar">
+                    <a href="/src/carrinho.html"><img src="/src/assets/img/global/icon-carrinho-de-compras-.png"
+                            alt="icone de carrinho"></a>
+                    <div><span>Carrinho</span></div>
+                </div>
+            </div>
+
+            <div class="divisao-bottom-bar"></div>
+
+            <div class="opcao-footer" id="btnHamburguerFooter">
+                <div class="area-opcao-bottom-bar">
+                    <img src="/src/assets/img/global/icons8-cardápio-50.png" alt="icone menu hamburguer">
+                    <div><span>Menu</span></div>
+                </div>
+            </div>
+        </nav>
     </footer>
     <script src="/src/assets/js/pages/index/index.js" type="module"></script>
 </body>

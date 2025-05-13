@@ -1,4 +1,3 @@
-
 .modal-area {
     display: none;
     position: fixed;
@@ -54,7 +53,7 @@
 
 }
 
-.btn-fechar {
+.btn-fechar-modal {
     position: absolute;
     margin: 0 0 10px 0;
     color: red;

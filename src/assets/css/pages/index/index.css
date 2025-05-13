@@ -3,3 +3,18 @@
 @import "/src/assets/css/pages/index/partials/categorias.css";
 @import "/src/assets/css/pages/index/partials/filtros.css";
 @import "/src/assets/css/global/menuLateral.css";
+@import "/src/assets/css/pages/index/partials/ultimos-pedidos.css";
+
+
+main {
+    /*coloca : border: 3px solid black; quando for tamanho tv*/
+    max-width: 2200px;
+    margin: 65px auto auto auto;
+    display: flex;
+}
+
+@media (max-width: 1229px) {
+    main {
+        flex-direction: column;
+    }
+}

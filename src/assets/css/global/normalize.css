@@ -3,18 +3,13 @@
     margin: 0;
 }
 
-main {
-    margin-top: 75px;
-    display: flex;
-}
-
 li {
     font-family: "Inter", sans-serif;
     font-size: 14px;
     list-style: none;
 }
 
-p {
+span {
     font-family: "Inter", sans-serif;
 }
 

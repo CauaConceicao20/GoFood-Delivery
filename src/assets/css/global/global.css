@@ -1,4 +1,8 @@
 @import "/src/assets/css/global/header.css";
-@import "/src/assets/css/global/modal.css";
+@import "/src/assets/css/global/modalEndereco.css";
 @import "/src/assets/css/global/normalize.css";
 @import "/src/assets/css/global/menuLateral.css";
+@import "/src/assets/css/global/footer.css";
+@import "/src/assets/css/global/menuHamburguerMobile.css";
+@import "/src/assets/css/global/menuInferior.css";
+@import "/src/assets/css/global/overlay.css";

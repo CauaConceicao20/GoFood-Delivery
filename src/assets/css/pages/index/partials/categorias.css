@@ -1,11 +1,5 @@
-.categorias {
+.section-categorias {
     width: 100%;
-
-}
-
-.categorias h1 {
-    font-size: 30px;
-    margin-left: 20px;
 }
 
 .img-categoria {
@@ -30,8 +24,12 @@
 
 }
 
+.opcao-categoria.selecionada {
+    border-bottom: 3px solid #E53935;
+}
+
 .opcao-categoria h2 {
-    font-size: 25px;
+    font-size: clamp(20px, 2vw, 25px);
     margin: 0;
     padding: 0;
     color: #E53935;
@@ -49,4 +47,16 @@
     border: none;
     background-color: #dd5f5d;
     margin: auto;
+}
+
+
+@media (max-width: 847px) {
+
+    .section-categorias {
+        overflow-x: scroll;
+    }
+
+    .img-categoria {
+        min-width: 150px;
+    }
 }

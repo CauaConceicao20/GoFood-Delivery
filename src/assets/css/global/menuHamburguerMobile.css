@@ -1,0 +1,11 @@
+.menu-hamburguer {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+}
+.menu-hamburguer .linha{
+    width: 30px;
+    border: 1px solid white;
+    margin: 6px 0 0 0;
+    border-radius: 50px;
+}
