@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/src/assets/css/pages/tela-de-carrinho/carrinho.css">
     <title>Seu Carrinho</title>
 </head>
@@ -24,15 +28,22 @@
 
         <button class="btn-endereco" id="btnEndereco">Insira seu endereço</button>
 
-        <button class="btn-carrinho" id="btnCarrinho">
+        <button class="btn-carrinho" id="btnCarrinhoHeader">
             <a href="/src/carrinho.html"><img src="/src/assets/img/global/icon-carrinho-de-compras-.png"
                     alt="Ícone do carrinho de compras"></a>
         </button>
 
-        <button class="btn-perfil" id="btnPerfil">
+        <button class="btn-perfil" id="btnPerfilHeader">
             <img src="/src/assets/img/global/icon-conta.png" alt="Ícone de perfil">
         </button>
     </header>
+
+    <div class="overlay" id="overlay"></div>
+    <aside class="menu-lateral" id="menuLateral">
+        <h2>Menu</h2>
+        <nav class="navegacao-menu" id="navegacaoMenu">
+        </nav>
+    </aside>
 
     <aside class="menu-lateral" id="menuLateral">
         <h2>Menu</h2>
@@ -45,66 +56,154 @@
     <main>
         <div class="modal-area" id="modalArea">
             <div class="modal-conteudo" id="modalConteudo">
-                <span class="btn-fechar" id="btnFechar">&times;</span>
+                <span class="btn-fechar-modal" id="btnFecharModal">&times;</span>
                 <h2>Digite Seu Endereço:</h2>
-                <input type="text">
+                <input class="input-endereco" id="inputEndereco" type="text">
                 <div class="area-btn-modal" id="areaBtnModal">
-                    <button>Adicionar Endereço</button>
+                    <button class="btn-adicionar-endereco-modal" id="btnAddEnderecoModal">Adicionar Endereço</button>
                 </div>
             </div>
         </div>
 
-        <div class="container">
-            <div class="back-button">⬅</div>
-            <h2>Carrinho</h2>
-            <div class="area-input"><input type="text" placeholder="Digite o nome do pedido">
+
+        <section class="carrinho">
+            <div class="area-do-btn-voltar">
+                <a href="/src/index.html"><button class="btn-de-voltar"><i class="fas fa-arrow-left"></i>
+                </button></a>
+
             </div>
-            <article class="item">
-                <img src="/src/assets/img/pages/index/hamburguer-card.jpg" alt="Hamburguer">
-                <div class="item-info">
-                    <p><strong>1x Hamburger de costela</strong></p>
-                    <p>Valor: 27,90</p>
+            <div class="header-do-carrinho">
+                <h1>Carrinho</h1>
+                <div class="area-de-busca-alimento-carrinho">
+                    <button class="icone-de-busca-carrinho">
+                        <img src="/src/assets/img/global/icon-pesquisar.png" alt="Ícone de busca">
+                    </button>
+                    <input type="text" placeholder="Buscar item">
                 </div>
-                <div class="item-buttons">
-                    <button>Ver produto</button>
-                    <button>Excluir produto</button>
-                </div>
-            </article>
+            </div>
+            <div class="conteudo-do-carrinho">
+                <article class="alimento-do-carrinho">
+                    <div class="area-checkbox-e-img">
+                        <div class="div-checkbox">
+                            <input type="checkbox">
+                        </div>
+                        <span class="area-imagem">
+                            <img src="/src/assets/img/pages/index/hamburguer-card.jpg" alt="">
+                        </span>
+                    </div>
+                    <div class="conteudo-alimento">
+                        <h2>Hamburger de costela</h2>
+                        <div>
+                            <p>Suculento, rústico e cheio de sabor. Esse hambúrguer artesanal é feito com carne de
+                                costela selecionada,
+                                garantindo uma textura macia e um gosto marcante defumado na medida certa.</p>
+                        </div>
+                        <span class="preco">Valor: 27,90</span>
+                        <div class="linha-de-opcoes">
+                            <span class="area-btn-diminuir"><button>-</button></span>
+                            <span><input type="number" id="numero" value="1" min="1" max="100" readonly></span>
+                            <span class="area-btn-aumentar"><button>+</button></span>
+                            <div class="area-do-btn-excluir">
+                                <button class="btn-excluir">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="alimento-do-carrinho">
+                    <div class="area-checkbox-e-img">
+                        <div class="div-checkbox">
+                            <input type="checkbox">
+                        </div>
+                        <span class="area-imagem">
+                            <img src="/src/assets/img/pages/index/hamburguer-card.jpg" alt="">
+                        </span>
+                    </div>
+                    <div class="conteudo-alimento">
+                        <h2>Hamburger de costela</h2>
+                        <div>
+                            <p>Suculento, rústico e cheio de sabor. Esse hambúrguer artesanal é feito com carne de
+                                costela selecionada,
+                                garantindo uma textura macia e um gosto marcante defumado na medida certa.</p>
+                        </div>
+                        <span class="preco">Valor: 27,90</span>
+                        <div class="linha-de-opcoes">
+                            <span class="area-btn-diminuir"><button>-</button></span>
+                            <span><input type="number" id="numero" value="1" min="1" max="100" readonly></span>
+                            <span class="area-btn-aumentar"><button>+</button></span>
+                            <div class="area-do-btn-excluir">
+                                <button class="btn-excluir">Excluir</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
-             <article class="item">
-                <img src="/src/assets/img/pages/index/hamburguer-card.jpg" alt="Hamburguer">
-                <div class="item-info">
-                    <p><strong>1x Hamburger de costela</strong></p>
-                    <p>Valor: 27,90</p>
-                </div>
-                <div class="item-buttons">
-                    <button>Ver produto</button>
-                    <button>Excluir produto</button>
-                </div>
-            </article>
-
-             <article class="item">
-                <img src="/src/assets/img/pages/index/hamburguer-card.jpg" alt="Hamburguer">
-                <div class="item-info">
-                    <p><strong>1x Hamburger de costela</strong></p>
-                    <p>Valor: 27,90</p>
-                </div>
-                <div class="item-buttons">
-                    <button>Ver produto</button>
-                    <button>Excluir produto</button>
-                </div>
-            </article>
+            <hr class="linha-de-separacao">
 
             <div class="summary">
-                <div>
-                    <p>Produtos: 2</p>
-                    <p>Valor total: R$55,80</p>
+                <div class="area-de-preco">
+                    <span>SubTotal(2 produtos):</span>
+                    <span>R$55,80</span>
                 </div>
-                <button class="finalize-btn">Finalizar pedido</button>
+                <div class="botao-finalizar">
+                    <button>Finalizar pedido</button>
+                </div>
             </div>
-        </div>
-        
+        </section>
     </main>
+
+    <div class="overlay" id="overlayMenuInferior"></div>
+    <div id="menuInferior" class="menu-inferior">
+        <div class="area-btn-fechar-menu-inferior">
+            <span class="btn-fechar-menu-inferior" id="btnFecharMenuInferior">&times;</span>
+        </div>
+        <ul class="menu-opcoes" id="menuOpcoes">
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-copyright">
+            <p>&copy; 2025 GoFood Delivery. Todos os direitos reservados.</p>
+        </div>
+
+        <nav class="bottom-bar">
+            <div class="opcao-footer" id="btnInicio">
+                <div class="area-opcao-bottom-bar">
+                    <a href="/src/index.html"><img src="/src/assets/img/global/icons8-casa-50.png"
+                            alt="icone de inicio"></a>
+                    <div><span>Início</span></div>
+                </div>
+            </div>
+
+            <div class="divisao-bottom-bar"></div>
+
+            <div class="opcao-footer" id="btnPerfilFooter">
+                <div class="area-opcao-bottom-bar">
+                    <img src="/src/assets/img/global/icon-conta.png" alt="icone de perfil">
+                    <div><span>Perfil</span></div>
+                </div>
+            </div>
+
+            <div class="divisao-bottom-bar"></div>
+
+            <div class="opcao-footer" id="btnCarrinhoFooter">
+                <div class="area-opcao-bottom-bar">
+                    <a href="/src/carrinho.html"><img src="/src/assets/img/global/icon-carrinho-de-compras-.png"
+                            alt="icone de carrinho"></a>
+                    <div><span>Carrinho</span></div>
+                </div>
+            </div>
+
+            <div class="divisao-bottom-bar"></div>
+
+            <div class="opcao-footer" id="btnHamburguerFooter">
+                <div class="area-opcao-bottom-bar">
+                    <img src="/src/assets/img/global/icons8-cardápio-50.png" alt="icone menu hamburguer">
+                    <div><span>Menu</span></div>
+                </div>
+            </div>
+        </nav>
+    </footer>
     <script src="/src/assets/js/pages/tela-de-carrinho/carrinho.js" type="module"></script>
 </body>
 

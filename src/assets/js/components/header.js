@@ -1,5 +1,5 @@
 export function ocultaElementos(path) {
     if(path === "src/carrinho.html") {
-        document.getElementById("btnCarrinho").style.display = "none";
+        document.getElementById("btnCarrinhoHeader").style.display = "none";
     }
 }

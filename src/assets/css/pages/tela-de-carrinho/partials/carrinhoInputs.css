@@ -1,0 +1,144 @@
+.header-do-carrinho {
+    margin-bottom: 30px;
+}
+
+p, span  {
+    font-family: "Inter", sans-serif;
+}
+
+.carrinho {
+    max-width: 1200px;
+    padding: 30px;
+    margin: 50px auto 0 auto;
+}
+
+.area-do-btn-voltar a {
+    text-decoration: none;
+}
+
+.btn-de-voltar{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(10, 10, 10, 0.1);
+}
+
+.btn-de-voltar:hover {
+    background-color: #f0f0f0;
+}
+
+.area-do-btn-voltar img:hover {
+    cursor: pointer;
+}
+
+.area-de-busca-alimento-carrinho {
+    display: flex;
+    max-width: 400px;
+}
+
+ 
+.icone-de-busca-carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: auto;
+    background-color: white;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #ddd;
+    border-right: none;
+    margin: 0;
+    padding: 0;
+}
+
+.icone-de-busca-carrinho:hover {
+    cursor: pointer;
+    background-color: #F4F4F4;
+}
+
+.header-do-carrinho input {
+    width: 100%;
+    height: 5px;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    min-width: 200px;
+    height: auto;
+    padding: 11px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+      outline: none;
+}
+
+.conteudo-do-carrinho {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-do-carrinho h1 {
+    font-family: "Acme", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    color: #E53935;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.linha-de-separacao {
+    margin: 20px 0 20px;
+    border: 1px solid #E53935 ;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.area-de-preco span{
+    font-weight: bold;
+}
+
+.summary span {
+   font-size: clamp(18px, 2vw, 20px);
+
+}
+
+.botao-finalizar button {
+    background-color: #E53935;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.botao-finalizar button:hover {
+    background-color:#a82d2d;
+    cursor: pointer;
+}
+
+
+@media (max-width: 630px) {
+    .summary {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
